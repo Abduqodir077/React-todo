@@ -1,18 +1,136 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-}
-
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .container{
+    max-width: 1440px;
+    margin: auto;
+  }
+  table{
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  td, th{
+    padding: 5px;
+  }
+  td:first-child, th:first-child{
+    padding: 5px;
+  }
+  button{
+    padding: 5px 15px;
+    background-color: red;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .green{
+    background-color: green;
+  }
+  
+  .modal_oyna{
+    width: 100%;
     height: 100vh;
-}
+    position: fixed;
+    top: -100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.747);
+    backdrop-filter: blur(3px);
+  }
+  .modal_korsat{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: -100%;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.747);
+    backdrop-filter: blur(3px);
+  }
+  .modal_oyna.active{
+    top: 0;
+  }
+  .modal_korsat.active{
+    top: 0%;
+  }
+  .show_data{
+    width: 80%;
+    position: absolute;
+    top: 80%;
+    transform: translate(0%, -50%);
+    padding: 10px;
+    background-color: white;
+    opacity: 0;
+  }
+  .show_data.active{
+    top: 30%;
+    opacity: 1;
+    transition: 0.3s ease;
+  }
+  .modal_oyna form {
+    width: 30%;
+    top: 30%;
+    opacity: 0;
+    transform: translate(0%, -50%);
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+    gap: 10px;  
+  }
+  .modal_oyna form.actives{
+    top: 50%;
+    opacity: 1;
+    transition: 0.3s ease;
+  }
+  form input,label{
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border: 2px solid silver;
+    border-radius: 3px;
+  }
+  label{
+    cursor: pointer;
+  }
+  form button{
+    background-color: green;
+    border: none;  
+    outline: none;
+  }
+  button:active{
+    opacity: 0.7;
+  }
+  input:focus{
+    box-shadow: 0 0 0px 3px aqua;
+    border: 2px solid transparent;
+  }
+  figure {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #rasm{
+    display: none;
+  }
+  .showes{
+    background-color: black;
+  }
 
-.container{
-    width: 500px;
-    height: 500px;
-}

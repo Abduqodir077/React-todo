@@ -49,8 +49,7 @@ function App() {
     let input_change = (e) => {
         setInputData({
             ...inputData,
-            rasm: URL.createObjectURL(e.target.files[0]),
-            title: e.target.files[0].name,
+            [e.target.name]: e.target.value,
         });
     };
 
@@ -58,7 +57,7 @@ function App() {
         setInputData({
             ...inputData,
             rasm: URL.createObjectURL(e.target.files[0]),
-            title: e.target.files[0].name
+            title: e.target.files[0].name,
         });
     };
 
